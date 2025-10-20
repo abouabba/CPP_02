@@ -81,14 +81,16 @@ Fixed Fixed::operator--()
 
 Fixed Fixed::operator++(int)
 {
-    this->value++;
-    return *this;
+    Fixed temp = *this;
+    value++;
+    return temp;
 }
 
 Fixed Fixed::operator--(int)
 {
-    this->value--;
-    return *this;
+    Fixed temp = *this;
+    value--;
+    return temp;
 }
 
 Fixed &Fixed::max(Fixed &other1, Fixed &other2)
