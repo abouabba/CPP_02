@@ -121,6 +121,30 @@ const Fixed &Fixed::min(Fixed const &other1, Fixed const &other2)
     return other2;
 }
 
+bool Fixed::operator>(const Fixed &other) const {
+    return this->value > other.value;
+}
+
+bool Fixed::operator<(const Fixed &other) const {
+    return this->value < other.value;
+}
+
+bool Fixed::operator>=(const Fixed &other) const {
+    return this->value >= other.value;
+}
+
+bool Fixed::operator<=(const Fixed &other) const {
+    return this->value <= other.value;
+}
+
+bool Fixed::operator==(const Fixed &other) const {
+    return this->value == other.value;
+}
+
+bool Fixed::operator!=(const Fixed &other) const {
+    return this->value != other.value;
+}
+
 std::ostream &operator<<(std::ostream &out, const Fixed &obj) {
     out << obj.toFloat();
     return out;

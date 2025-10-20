@@ -31,6 +31,12 @@ class Fixed {
         static const Fixed &max(const Fixed &other1, const Fixed &other2);
         static Fixed &min(Fixed &other1, Fixed &other2);
         static Fixed &max(Fixed &other1, Fixed &other2);
+        bool operator>(const Fixed &other) const;
+        bool operator<(const Fixed &other) const;
+        bool operator>=(const Fixed &other) const;
+        bool operator<=(const Fixed &other) const;
+        bool operator==(const Fixed &other) const;
+        bool operator!=(const Fixed &other) const;
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &obj);
