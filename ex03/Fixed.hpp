@@ -19,10 +19,10 @@ class Fixed {
         void setRawBits( int const raw );
         float toFloat( void ) const;
         int toInt( void ) const;
-        float operator*(const Fixed &n2);
-        float operator+(const Fixed &n2);
-        float operator-(const Fixed &n2);
-        float operator/(const Fixed &n2);
+        Fixed operator*(const Fixed &n2);
+        Fixed operator+(const Fixed &n2);
+        Fixed operator-(const Fixed &n2);
+        Fixed operator/(const Fixed &n2);
         Fixed operator++();
         Fixed operator--();
         Fixed operator++(int);

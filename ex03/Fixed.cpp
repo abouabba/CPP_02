@@ -44,23 +44,23 @@ int Fixed::getRawBits() const {
 
 Fixed::~Fixed() {}
 
-float Fixed::operator*(const Fixed &other) /////// '*'
+Fixed Fixed::operator*(const Fixed &other) /////// '*'
 {
     float a = this->toFloat() * other.toFloat();
     return(a);
 }
 
-float Fixed::operator+(const Fixed &other) ////// '+'
+Fixed Fixed::operator+(const Fixed &other) ////// '+'
 {
     return(this->toFloat() + other.toFloat());
 }
 
-float Fixed::operator-(const Fixed &other) ////// '-'
+Fixed Fixed::operator-(const Fixed &other) ////// '-'
 {
     return(this->toFloat() - other.toFloat());
 }
 
-float Fixed::operator/(const Fixed &other) /////  '/'
+Fixed Fixed::operator/(const Fixed &other) /////  '/'
 {
     return(this->toFloat() / other.toFloat());
 }
