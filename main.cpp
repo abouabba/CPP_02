@@ -1,21 +1,5 @@
 #include <iostream>
-
-class Point {
-public:
-    int x;
-    int y;
-
-    Point(int x_coord = 0, int y_coord = 0) : x(x_coord), y(y_coord) {}
-
-    // Operator function to overload the '+' operator
-    Point operator-(const Point& other) const {
-        return Point(x + other.x, y + other.y);
-    }
-
-    void display() const {
-        std::cout << "(" << x << ", " << y << ")" << std::endl;
-    }
-};
+# include "point.hpp"
 
 int main() {
     Point p1(10, 20);
