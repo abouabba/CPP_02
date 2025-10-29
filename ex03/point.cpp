@@ -1,10 +1,19 @@
 #include "point.hpp"
 
-Point::Point() : x(x), y(y) { };
+Point::Point() : x(0), y(0) {};
 
-Point::getX() const {return x;}
-Point::getY() const {return y;}
-
-Point(float const x, float const y) {
-    
+Fixed Point::getX() const
+{
+    return this->x;
 }
+
+Fixed Point::getY() const
+{
+    return this->y;
+}
+
+Point::Point(Point const &src) : x(src.x), y(src.y) {}
+
+Point::Point(const float x, const float y) : x(x), y(y) {}
+
+Point::~Point() {}
