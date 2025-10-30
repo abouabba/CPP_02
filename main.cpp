@@ -1,29 +1,13 @@
 #include <iostream>
+#include <iomanip>
+#include <cstdint>
+#include <cstring>
 
-
-class Buffer {
-    private:
-        int* data;
-    
-    public:
-        Buffer() {
-            data = new int(10);
-        }
-    
-        // Copy assignment بدون شرط
-        Buffer& operator=(const Buffer& other) {
-            delete data;           // 1) كانمسحو البيانات القديمة
-            data = new int(*other.data); // 2) كننسخو من other
-            return *this;
-        }
-    
-        ~Buffer() {
-            delete data;
-        }
-    };
-    
 int main() {
-    Buffer buf1;
-    buf1 = buf1; // Copy assignment بدون شرط
-    return 0;
+    float f = 3.4f;
+    int  bits;
+    std::memcpy(&bits, &f, sizeof(bits));
+    for (int i=31;i>=0;--i)
+        std::cout << ((bits >> i) & 1);
+    std::cout << std::endl;
 }
