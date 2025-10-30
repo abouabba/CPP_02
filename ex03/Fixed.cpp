@@ -29,8 +29,7 @@ float Fixed::toFloat() const {
 
 Fixed &Fixed::operator=(const Fixed &obj) {
     // std::cout << value << std::endl;
-    if (this != &obj)
-        value = obj.getRawBits();
+    value = obj.getRawBits();
     return *this;
 }
 

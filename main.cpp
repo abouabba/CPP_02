@@ -1,19 +1,29 @@
 #include <iostream>
-# include "point.hpp"
 
+
+class Buffer {
+    private:
+        int* data;
+    
+    public:
+        Buffer() {
+            data = new int(10);
+        }
+    
+        // Copy assignment بدون شرط
+        Buffer& operator=(const Buffer& other) {
+            delete data;           // 1) كانمسحو البيانات القديمة
+            data = new int(*other.data); // 2) كننسخو من other
+            return *this;
+        }
+    
+        ~Buffer() {
+            delete data;
+        }
+    };
+    
 int main() {
-    Point p1(10, 20);
-    Point p2(5, 7);
-
-    // Using the overloaded '+' operator
-    Point p3 = p1 - p2; 
-
-    std::cout << "Point 1: ";
-    p1.display();
-    std::cout << "Point 2: ";
-    p2.display();
-    std::cout << "Sum of Points: ";
-    p3.display(); // Expected output: (15, 27)
-
+    Buffer buf1;
+    buf1 = buf1; // Copy assignment بدون شرط
     return 0;
 }

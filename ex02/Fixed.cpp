@@ -29,8 +29,7 @@ float Fixed::toFloat() const {
 
 Fixed &Fixed::operator=(const Fixed &obj) {
     // std::cout << value << std::endl;
-    if (this != &obj)
-        value = obj.getRawBits();
+    value = obj.getRawBits();
     return *this;
 }
 
@@ -44,23 +43,23 @@ int Fixed::getRawBits() const {
 
 Fixed::~Fixed() {}
 
-float Fixed::operator*(const Fixed &other) /////// '*'
+float Fixed::operator*(const Fixed &other)
 {
     float a = this->toFloat() * other.toFloat();
     return(a);
 }
 
-float Fixed::operator+(const Fixed &other) ////// '+'
+float Fixed::operator+(const Fixed &other)
 {
     return(this->toFloat() + other.toFloat());
 }
 
-float Fixed::operator-(const Fixed &other) ////// '-'
+float Fixed::operator-(const Fixed &other)
 {
     return(this->toFloat() - other.toFloat());
 }
 
-float Fixed::operator/(const Fixed &other) /////  '/'
+float Fixed::operator/(const Fixed &other)
 {
     return(this->toFloat() / other.toFloat());
 }
@@ -80,14 +79,14 @@ Fixed Fixed::operator--()
 Fixed Fixed::operator++(int)
 {
     Fixed temp = *this;
-    value++;
+    this->value++;
     return temp;
 }
 
 Fixed Fixed::operator--(int)
 {
     Fixed temp = *this;
-    value--;
+    this->value--;
     return temp;
 }
 
