@@ -4,7 +4,6 @@
 # include <iostream>
 #include "Fixed.hpp"
 
-
 class Point {
     private:
         Fixed const x;

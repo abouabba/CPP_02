@@ -1,6 +1,6 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = fixed-point
+NAME = FIXED_POINT
 SRCS = main.cpp Fixed.cpp
 HEADRS = Fixed.hpp
 OBGS = ${SRCS:.cpp=.o}

@@ -141,7 +141,6 @@ bool Fixed::operator==(const Fixed &other) const {
 bool Fixed::operator!=(const Fixed &other) const {
     return this->value != other.value;
 }
-
 std::ostream &operator<<(std::ostream &out, const Fixed &obj) {
     out << obj.toFloat();
     return out;
