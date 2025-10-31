@@ -15,13 +15,13 @@ static Fixed area(Point const a, Point const b, Point const c)
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
 {
-    Fixed total = area(a, b, c);
-    Fixed a1 = area(point, b, c);
-    Fixed a2 = area(a, point, c);
-    Fixed a3 = area(a, b, point);
+    Fixed total = area(a, b, c); // 50
+    Fixed a1 = area(point, b, c); // 4.75
+    Fixed a2 = area(a, point, c); // 20.25
+    Fixed a3 = area(a, b, point); // 25
 
     if (a1 == Fixed(0) || a2 == Fixed(0) || a3 == Fixed(0))
-        return false; // on the edge => subject says false
+        return false;
 
     return (total == a1 + a2 + a3);
 }
