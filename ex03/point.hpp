@@ -4,6 +4,7 @@
 # include <iostream>
 #include "Fixed.hpp"
 
+
 class Point {
     private:
         Fixed const x;
@@ -12,6 +13,7 @@ class Point {
         Point();
         Point(float const x, float const y);
         Point(Point const &src);
+        Point& operator=(const Point &other);
         ~Point();
 
         Fixed getX() const;

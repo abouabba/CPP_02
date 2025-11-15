@@ -16,4 +16,9 @@ Fixed Point::getY() const
 
 Point::Point(Point const &src) : x(src.x), y(src.y) {}
 
+Point &Point::operator=(const Point &other) {
+    (void)other;
+    return *this;
+}
+
 Point::~Point() {}
